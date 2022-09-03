@@ -11,6 +11,7 @@ export class ServersComponent implements OnInit {
   allowedNewServer:boolean=false
   serverCreation:string='no server is created'
   serverName:string='testServer'
+  serverCreated:boolean=false
 
   constructor() { 
     setTimeout(()=>{
@@ -22,6 +23,7 @@ export class ServersComponent implements OnInit {
   }
 
   onCreatedServer():void{
+    this.serverCreated=true
     this.serverCreation='server was created '+this.serverName
   }
 
