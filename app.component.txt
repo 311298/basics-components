@@ -1,0 +1,77 @@
+The basics
+
+================================================================================
+
+16.
+index.html serve inside the browsers.
+app-root get renders inside the index.html with the help of selector of app-root.
+after that main.ts files runs which calls the app.module.ts file.
+In app.module.ts there is bootstrap array which contains the AppComponent; it basically tells at the time of reload what should be render first.
+
+17.
+component is just a typeScript class which we need to export inside the AppComponent.
+we will add the decorator to make it different from normal TS class -> @Component.
+inside the component decorator we will pass the JS object which will customize our component.
+selector and templateUrl are the key of the JS object passed selector must remain unique and templateUrl contains the path of html file, both value must be string in nature.
+
+18.
+in app module we import the other decorator called @NgModule it has 4 properties.
+declaration , imports, providers and bootstrap( which tells app module which component to render at the time of loading).
+to register the new component, we add it inside the declaration array.
+imports array hold the modules which provide the specific action inside the component, like providing the forms, data-bingding etc.
+
+19.
+to render the component we put the app-server selector inside the AppComponent html file.
+
+20.
+to create the component via cli -> ng g c componentName.
+creating component via cli ; we don't have to manually add the declaration it is done automatically.
+
+21.
+to show the html template in the webpage we need to add the component's selector in root component html file to render it.
+
+22.
+we can change the templateUrl to template to write the html inside the .ts file.
+for single line '' single quotes and for multi line we need the `` back ticks.
+
+23.
+we write the css for component inside .css file.
+in styleUrls is array where we could add the multiple css.
+same as template we have the style in @component to write the css in same .ts file.
+style will take precidence over the styleUrls.
+
+24.
+to change the selector( as it works as html tag ) we can make it attribute.
+instead of 'app-component' -> '[app-component]' and in html instead of <app-server></app-server> we need to use the <div app-server></app-server>.
+here angular is selected by attibute not by selector.
+we can do same thing for class also. selector: '.app-server' and <div class="app-server"></div>
+
+26.
+databinding === communication btw html to .ts file.
+string interpolation {{ data }}.
+property binding [property]="data".
+event binding (event)="expression".
+two way databinding [(NgModule)]="data".
+above the types of data binding.
+
+27.
+any expression which will end up as string can be used for string interpolation.
+inside the string interpolation we can even call the function which we return the string.
+do not forgot to add the () while calling the function inside the string interpolation as will print the function inside the .ts file.
+
+28.
+[] -> indicates the property binding with .ts variable
+[disabled]="!allowNewServer" -> "expression".
+we can bind it to native html elements like above disabled, but we can also bind it to another things like attributes and component properties.
+
+29.
+<p>{{ allowedNewServer }}</p> ; string interpolation to print the value.
+<p [innerText]="allowedNewServer"></p> ; property binding to print the value.
+when to use when.
+if we simply want to print something use the string interpolation, while if want to do some operation on html property and it's attributes use the property binding.
+
+30.
+(event)="function()" ; event can be mouseover, click etc while function is defined inside the .ts file.
+
+31.
+$event is the data emitted by the function on event binding, we can console log it and see the
