@@ -101,3 +101,10 @@ instead normal tags we need to use the ng-template here for it to work.
 36.
 attribute directive only place the effect on the HTML DOM.
 ngStyle is built in directive.
+[ngStyle]="{ backgroundColor: getColor() }" -> ngStyle does not need the [] but as we are property binding and ngStyle only accepts the JS object.
+
+37.
+ngStyle allows to dynamically add css class while ngClass allows to remove it very much similar.
+here [ngClass]="{ online: serverStatus === 'online' }"; here first online is css class defined inside the .ts file which we are assigning to condition if serverStatus is indeed online then only css will apply on it.
+
+38.
