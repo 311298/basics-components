@@ -10,6 +10,7 @@ export class ServersComponent implements OnInit {
 
   allowedNewServer:boolean=false
   serverCreation:string='no server is created'
+  serverName!:string
 
   constructor() { 
     setTimeout(()=>{
@@ -24,9 +25,9 @@ export class ServersComponent implements OnInit {
     this.serverCreation='server was created'
   }
 
-  onUpdateServerName(input):void{
-    // console.log(input);
-    this.serverCreation=input.target.value
+  onUpdateServerName(input:Event):void{
+    //input: { target: { value: string; }; } -> suggested by vs code
+    this.serverName=(<HTMLInputElement>input.target).value
   }
 
 }

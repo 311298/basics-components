@@ -74,4 +74,7 @@ if we simply want to print something use the string interpolation, while if want
 (event)="function()" ; event can be mouseover, click etc while function is defined inside the .ts file.
 
 31.
-$event is the data emitted by the function on event binding, we can console log it and see the
+$event is the data emitted by the function on event binding, we can console log it and see the different properties.
+it can happen we may not define the event type inside the function; because by default it will put any as it's type but for better clarity type will be Event and we need to type cast inside the function while using <HTMLInputElement>.
+
+32.
