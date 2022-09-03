@@ -15,7 +15,7 @@ inside the component decorator we will pass the JS object which will customize o
 selector and templateUrl are the key of the JS object passed selector must remain unique and templateUrl contains the path of html file, both value must be string in nature.
 
 18.
-in app module we import the other decorator called @NgModule it has 4 properties.
+in app module we import the other decorator called @ngModule it has 4 properties.
 declaration , imports, providers and bootstrap( which tells app module which component to render at the time of loading).
 to register the new component, we add it inside the declaration array.
 imports array hold the modules which provide the specific action inside the component, like providing the forms, data-bingding etc.
@@ -51,7 +51,7 @@ databinding === communication btw html to .ts file.
 string interpolation {{ data }}.
 property binding [property]="data".
 event binding (event)="expression".
-two way databinding [(NgModule)]="data".
+two way databinding [(ngModel)]="data".
 above the types of data binding.
 
 27.
@@ -78,3 +78,11 @@ $event is the data emitted by the function on event binding, we can console log 
 it can happen we may not define the event type inside the function; because by default it will put any as it's type but for better clarity type will be Event and we need to type cast inside the function while using <HTMLInputElement>.
 
 32.
+ngModel is a special directive for 2 way databinding.
+suppose if we used the both above and ngModel we will see the changes instaneously for ngModel but for input event we does not see that.
+
+33.
+directive -> directive are the instruction in the DOM.
+selector is kind of directive as when we place inside the AppComponent we are telling angular where we need the component which we created.
+
+34.
